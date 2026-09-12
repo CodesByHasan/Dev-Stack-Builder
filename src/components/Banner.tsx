@@ -19,24 +19,12 @@ const Banner = () => {
           your next project.
         </p>
 
-        {/* <div className="flex gap-3">
-          <button className="btn bg-gradient-to-r from-orange-500 to-pink-500 text-white">
-            Explore Technologies
-          </button>
-
-          <button className="btn btn-outline">
-            Learn More
-          </button>
-        </div> */}
 
         <div className="flex gap-3">
         <button className="btn rounded-lg border-0 bg-gradient-to-r from-orange-500 to-pink-500 text-white py-2 px-2">
         Explore Technologies
        </button>
 
-      {/* <button className="btn btn-outline rounded-lg py-2 px-4 border-[#E5E7EB] ">
-        Learn More
-      </button> */}
        <button className="btn h-11 min-h-11 w-[185px] rounded-lg border border-gray-200 bg-white text-gray-600">
        Learn More
      </button>

@@ -51,19 +51,12 @@ const StackCards = ({ stack }: { stack: IStack[] }) => {
             <div className="my-4 h-px w-full bg-gray-100"></div>
 
             {/* Info */}
-            {/* <div className="flex items-center  text-[#475569] justify-between mt-3">
-              <div className="badge badge-ghost border border-gray-100 py-1 px-1 text-sm text-base-content/60">
-                {item.category}
-              </div>
-
-              <span className="text-sm text-base-content/60">
-                {item.difficulty}
-              </span> */}
+        
               <div className="flex items-center justify-between mt-3">
 
-         <div className="rounded-md border border-gray-100 bg-gray-50 px-3 py-1 text-sm text-[#475569]">
-         {item.category}
-         </div>
+           <div className="rounded-md border border-gray-100 bg-gray-50 px-3 py-1 text-sm text-[#475569]">
+           {item.category}
+           </div>
 
           <span className="text-sm text-[#475569]">
           {item.difficulty}
