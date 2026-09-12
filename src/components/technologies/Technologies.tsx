@@ -1,6 +1,13 @@
 import { use } from "react";
+import type { IStack } from "../../types/Types";
+import technologies from './Technologies';
+import StackCards from "./StackCards";
 
-const technologies = ({ stackPromise }) => {
+interface TechnologiesProps {
+  stackPromise: Promise<IStack[]>;
+}
+
+const Technologies = ({ stackPromise }: TechnologiesProps) => {
     const stack = use(stackPromise);
     return (
         <div className="my-[40px] container mx-auto">
@@ -14,8 +21,9 @@ const technologies = ({ stackPromise }) => {
   <p className="mt-2 text-base text-[#64748B]">
     Pick one technology per category to build your ideal stack.
   </p>
+  <StackCards stack={stack} />
 </div>
     );
 };
 
-export default technologies;
+export default Technologies;
