@@ -1,6 +1,16 @@
 import React from 'react';
 import type { IStack } from '../../types/Types';
 
+const badgeStyles: Record<string, string> = {
+  blue: "bg-blue-50 text-blue-500 border-blue-100",
+  green: "bg-green-50 text-green-500 border-green-100",
+  orange: "bg-orange-50 text-orange-500 border-orange-100",
+  red: "bg-red-50 text-red-500 border-red-100",
+  yellow: "bg-yellow-50 text-yellow-600 border-yellow-100",
+  cyan: "bg-cyan-50 text-cyan-500 border-cyan-100",
+};
+
+
 const StackCards = ({ stack }: { stack: IStack[] }) => {
 
    return (
@@ -22,7 +32,7 @@ const StackCards = ({ stack }: { stack: IStack[] }) => {
               />
 
               {item.badge && (
-                <div className="badge badge-info badge-soft">
+                <div className={` p-1 rounded-full px-3 badge ${item.badgeColor ? badgeStyles[item.badgeColor] : 'badge-info badge-soft'}`}>
                   {item.badge}
                 </div>
               )}

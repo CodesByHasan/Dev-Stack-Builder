@@ -7,4 +7,5 @@ export interface IStack {
   rating: number;
   difficulty: string;
   badge: string | null;
+  badgeColor: string | null;
 }
