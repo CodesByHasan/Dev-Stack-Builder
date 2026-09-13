@@ -1,9 +1,4 @@
-import type { IStack } from '../../types/Types'
-
-
-/* =========================================================
-   SECTION 1: BADGE STYLES
-   ========================================================= */
+import type { IStack } from "../../types/Types";
 
 const badgeStyles: Record<string, string> = {
   blue: "bg-blue-50 text-blue-500 border-blue-100",
@@ -12,59 +7,36 @@ const badgeStyles: Record<string, string> = {
   red: "bg-red-50 text-red-500 border-red-100",
   yellow: "bg-yellow-50 text-yellow-600 border-yellow-100",
   cyan: "bg-cyan-50 text-cyan-500 border-cyan-100",
-}
-
-
-/* =========================================================
-   SECTION 2: PROPS TYPE
-   ========================================================= */
+};
 
 interface StackCardsProps {
-  stack: IStack[]
-  selectedStack: IStack[]
-  handleAddToStack: (item: IStack) => void
+  stack: IStack[];
+  selectedStack: IStack[];
+  handleAddToStack: (item: IStack) => void;
 }
-
-
-/* =========================================================
-   SECTION 3: STACK CARDS COMPONENT
-   ========================================================= */
 
 const StackCards = ({
   stack,
   selectedStack,
   handleAddToStack,
 }: StackCardsProps) => {
-
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-
       {stack.map((item) => {
-
-
         const isSelected = selectedStack.some(
           (technology) => technology.id === item.id
-        )
-
-
+        );
 
         const badgeStyle =
           badgeStyles[item.badgeColor] ||
-          "bg-gray-50 text-gray-500 border-gray-100"
-
-        const badgeText = item.badge || "Essential"
-
+          "bg-gray-50 text-gray-500 border-gray-100";
 
         return (
           <div
             key={item.id}
             className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm"
           >
-
-        
-
             <div className="flex items-center justify-between">
-
               <img
                 src={item.icon}
                 alt={item.name}
@@ -74,26 +46,17 @@ const StackCards = ({
               <span
                 className={`rounded-full border px-3 py-1 text-xs ${badgeStyle}`}
               >
-                {badgeText}
+                {item.badge || "Essential"}
               </span>
-
             </div>
 
-
-            <h3 className="mt-3 text-lg font-bold">
-              {item.name}
-            </h3>
-
-
+            <h3 className="mt-3 text-lg font-bold">{item.name}</h3>
 
             <p className="mt-2 min-h-[60px] text-sm leading-5 text-slate-500">
               {item.description}
             </p>
 
-
-
             <div className="mt-4 flex items-center justify-between gap-2">
-
               <span className="rounded-md border border-gray-200 px-3 py-1 text-sm text-slate-600">
                 {item.category}
               </span>
@@ -105,10 +68,7 @@ const StackCards = ({
               <span className="whitespace-nowrap text-sm text-slate-600">
                 ⭐ {item.rating}
               </span>
-
             </div>
-
-
 
             <button
               onClick={() => handleAddToStack(item)}
@@ -121,14 +81,11 @@ const StackCards = ({
             >
               {isSelected ? "Added to Stack" : "Add to Stack"}
             </button>
-
           </div>
-        )
+        );
       })}
-
     </div>
-  )
-}
+  );
+};
 
-
-export default StackCards
+export default StackCards;

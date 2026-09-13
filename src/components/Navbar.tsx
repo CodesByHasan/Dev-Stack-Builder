@@ -2,7 +2,7 @@ import navimg from '../assets/logo-text.png'
 
 const navbar = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="sticky top-0 navbar bg-base-100">
       <nav className="flex gap-4 items-center justify-between container mx-auto py-4">
         <img src={navimg} alt="DevStack Builder" className="h-10 w-auto" />
         <ul className="flex gap-4 items-center">

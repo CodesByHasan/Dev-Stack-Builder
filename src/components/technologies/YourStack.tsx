@@ -1,55 +1,48 @@
-import type { Dispatch, SetStateAction } from "react";
+import type {
+  Dispatch,
+  SetStateAction,
+} from "react";
+
 import type { IStack } from "../../types/Types";
 
-interface YourStackProps {
-  selectedStack: IStack[];
-  setSelectedStack: Dispatch<SetStateAction<IStack[]>>;
+
+interface IYourStackProps {
+
+  stack: IStack[];
+
+  setStack: Dispatch<SetStateAction<IStack[]>>;
+
 }
 
+
 const YourStack = ({
-  selectedStack,
-  setSelectedStack,
-}: YourStackProps) => {
-
-  // Remove one technology
-  const handleRemove = (id: number) => {
-    setSelectedStack((prevStack) =>
-      prevStack.filter((item) => item.id !== id)
-    );
-  };
-
-  // Remove all technologies
-  const handleRemoveAll = () => {
-    setSelectedStack([]);
-  };
+  stack,
+  setStack,
+}: IYourStackProps) => {
 
   return (
-    <div className="mt-25 justify-right rounded-2xl border border-gray-200 p-5">
+    <div className=" mt-33 top-5 rounded-2xl border border-gray-200 bg-white p-5">
 
-      {/* =========================================================
-          SECTION 1: HEADER
-      ========================================================= */}
+      {/* Header */}
 
       <h2 className="text-xl font-bold">
         Your Stack
       </h2>
 
       <p className="text-sm text-gray-400">
-        {selectedStack.length} Technologies Selected
+        {stack.length} Technologies Selected
       </p>
 
 
-      {/* =========================================================
-          SECTION 2: SELECTED TECHNOLOGIES
-      ========================================================= */}
+      {/* Selected Technologies */}
 
       <div className="mt-4 space-y-2">
 
-        {selectedStack.map((item) => (
+        {stack.map((item) => (
 
           <div
             key={item.id}
-            className="flex items-center justify-between rounded-lg border p-3"
+            className="flex items-center justify-between rounded-lg border border-gray-200 p-3"
           >
 
             <div className="flex items-center gap-3">
@@ -61,6 +54,7 @@ const YourStack = ({
               />
 
               <div>
+
                 <p className="font-medium">
                   {item.name}
                 </p>
@@ -68,15 +62,24 @@ const YourStack = ({
                 <p className="text-xs text-gray-400">
                   {item.category}
                 </p>
+
               </div>
 
             </div>
 
 
-            {/* Remove one */}
+            {/* Remove */}
+
             <button
-              onClick={() => handleRemove(item.id)}
-              className="text-gray-500 hover:text-red-500"
+              onClick={() =>
+                setStack(
+                  stack.filter(
+                    (technology) =>
+                      technology.id !== item.id
+                  )
+                )
+              }
+              className="text-xl text-gray-400 hover:text-red-500"
             >
               ×
             </button>
@@ -88,13 +91,12 @@ const YourStack = ({
       </div>
 
 
-      {/* =========================================================
-          SECTION 3: REMOVE ALL
-      ========================================================= */}
+      {/* Remove All */}
 
       <button
-        onClick={handleRemoveAll}
-        className="mt-6 w-full rounded-lg border py-2"
+        onClick={() => setStack([])}
+        disabled={stack.length === 0}
+        className="mt-6 w-full rounded-lg border border-gray-200 py-2 disabled:cursor-not-allowed disabled:opacity-50"
       >
         Remove All
       </button>
@@ -102,5 +104,6 @@ const YourStack = ({
     </div>
   );
 };
+
 
 export default YourStack;
