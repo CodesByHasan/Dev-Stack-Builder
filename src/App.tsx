@@ -37,7 +37,7 @@ function App() {
 
   const handleAddToStack = (item: IStack) => {
 
-   
+    // Check if the technology is already selected
     setSelectedStack((prevStack) => {
 
       const alreadyExists = prevStack.some(
