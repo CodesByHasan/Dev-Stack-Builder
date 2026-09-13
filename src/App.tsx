@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import { Suspense, useState } from "react";
 
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";

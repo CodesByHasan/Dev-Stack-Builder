@@ -17,7 +17,7 @@ const YourStack = ({
   setStack,
 }: IYourStackProps) => {
 
-  const handleRemove = (id: number) => {
+  const handleRemove = (id: string) => {
     setStack(
       stack.filter(
         (technology) => technology.id !== id

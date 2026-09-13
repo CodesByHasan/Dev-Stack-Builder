@@ -28,7 +28,7 @@ const StackCards = ({
         );
 
         const badgeStyle =
-          badgeStyles[item.badgeColor] ||
+          badgeStyles[item.badgeColor || ""]
           "bg-gray-50 text-gray-500 border-gray-100";
 
         return (
