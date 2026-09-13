@@ -9,7 +9,7 @@ import type { IStack } from './types/Types'
 
 
 /* =========================================================
-   SECTION 1: FETCH DATA
+    FETCH DATA SECTION
    ========================================================= */
 
 const stackFetch = async (): Promise<IStack[]> => {
@@ -23,7 +23,7 @@ const stackPromise = stackFetch()
 
 
 /* =========================================================
-   SECTION 2: APP
+    APP SECTION
    ========================================================= */
 
 function App() {
@@ -32,12 +32,12 @@ function App() {
 
 
   /* =========================================================
-     SECTION 3: ADD TECHNOLOGY
+      ADD TECHNOLOGY SECTION
      ========================================================= */
 
   const handleAddToStack = (item: IStack) => {
 
-    // Prevent duplicate technology
+   
     setSelectedStack((prevStack) => {
 
       const alreadyExists = prevStack.some(
@@ -54,7 +54,7 @@ function App() {
 
 
   /* =========================================================
-     SECTION 4: REMOVE TECHNOLOGY
+      REMOVE TECHNOLOGY SECTION
      ========================================================= */
 
   const handleRemoveFromStack = (id: string | number) => {
@@ -66,7 +66,7 @@ function App() {
 
 
   /* =========================================================
-     SECTION 5: UI
+     UI SECTION
      ========================================================= */
 
   return (
