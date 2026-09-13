@@ -74,7 +74,6 @@ const StackCards = ({
 
             <button
               onClick={() => handleAddToStack(item)}
-              // disabled={isSelected}
               className={`mt-4 w-full rounded-lg py-2 text-sm font-medium text-white transition ${
                 isSelected
                   ? "cursor-not-allowed bg-gray-400"

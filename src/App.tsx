@@ -42,11 +42,6 @@ const App = () => {
      SECTION 4: ADD TO STACK
      ========================================================= */
 
-  // const handleAddToStack = (item: IStack) => {
-  //   setStack((prevStack) => [...prevStack, item]);
-  //   toast.success(`${item.name} added to your stack!`, {
-  //   });
-  // };
 
   const handleAddToStack = (item: IStack) => {
   const isAlreadyAdded = stack.some(
