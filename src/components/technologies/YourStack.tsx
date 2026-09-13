@@ -5,23 +5,35 @@ import type {
 
 import type { IStack } from "../../types/Types";
 
+import { toast } from "react-toastify";
 
 interface IYourStackProps {
-
   stack: IStack[];
-
   setStack: Dispatch<SetStateAction<IStack[]>>;
-
 }
-
 
 const YourStack = ({
   stack,
   setStack,
 }: IYourStackProps) => {
 
+  const handleRemove = (id: number) => {
+    setStack(
+      stack.filter(
+        (technology) => technology.id !== id
+      )
+    );
+
+    toast.success("Technology removed from stack!");
+  };
+
+  const handleRemoveAll = () => {
+    setStack([]);
+    toast.success("All technologies removed!");
+  };
+
   return (
-    <div className=" mt-33 top-5 rounded-2xl border border-gray-200 bg-white p-5">
+    <div className="mt-33 top-5 rounded-2xl border border-gray-200 bg-white p-5">
 
       {/* Header */}
 
@@ -71,14 +83,7 @@ const YourStack = ({
             {/* Remove */}
 
             <button
-              onClick={() =>
-                setStack(
-                  stack.filter(
-                    (technology) =>
-                      technology.id !== item.id
-                  )
-                )
-              }
+              onClick={() => handleRemove(item.id)}
               className="text-xl text-gray-400 hover:text-red-500"
             >
               ×
@@ -94,7 +99,7 @@ const YourStack = ({
       {/* Remove All */}
 
       <button
-        onClick={() => setStack([])}
+        onClick={handleRemoveAll}
         disabled={stack.length === 0}
         className="mt-6 w-full rounded-lg border border-gray-200 py-2 disabled:cursor-not-allowed disabled:opacity-50"
       >
@@ -104,6 +109,5 @@ const YourStack = ({
     </div>
   );
 };
-
 
 export default YourStack;

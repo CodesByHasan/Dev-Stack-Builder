@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Technologies from "./components/technologies/Technologies";
 import YourStack from "./components/technologies/YourStack";
+import { toast } from "react-toastify";
 
 import type { IStack } from "./types/Types";
 
@@ -41,9 +42,26 @@ const App = () => {
      SECTION 4: ADD TO STACK
      ========================================================= */
 
+  // const handleAddToStack = (item: IStack) => {
+  //   setStack((prevStack) => [...prevStack, item]);
+  //   toast.success(`${item.name} added to your stack!`, {
+  //   });
+  // };
+
   const handleAddToStack = (item: IStack) => {
-    setStack((prevStack) => [...prevStack, item]);
-  };
+  const isAlreadyAdded = stack.some(
+    (technology) => technology.id === item.id
+  );
+
+  if (isAlreadyAdded) {
+    toast.warning(`${item.name} is already in your stack!`);
+    return;
+  }
+
+  setStack((prevStack) => [...prevStack, item]);
+
+  toast.success(`${item.name} added to your stack!`);
+};
 
 
   return (

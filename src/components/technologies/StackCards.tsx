@@ -56,6 +56,8 @@ const StackCards = ({
               {item.description}
             </p>
 
+            <div className="my-4 h-px w-full bg-gray-100"></div>
+
             <div className="mt-4 flex items-center justify-between gap-2">
               <span className="rounded-md border border-gray-200 px-3 py-1 text-sm text-slate-600">
                 {item.category}
@@ -72,7 +74,7 @@ const StackCards = ({
 
             <button
               onClick={() => handleAddToStack(item)}
-              disabled={isSelected}
+              // disabled={isSelected}
               className={`mt-4 w-full rounded-lg py-2 text-sm font-medium text-white transition ${
                 isSelected
                   ? "cursor-not-allowed bg-gray-400"
