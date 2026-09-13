@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <footer className="mt-16 pr-70 w-full border-t border-gray-100">
 
-      {/* Footer Content */}
+      
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-10 md:grid-cols-4">
 
-        {/* Brand */}
+        
         <div>
           <img
             src={footImg}
@@ -28,7 +28,6 @@ const Footer = () => {
         </div>
 
 
-        {/* Product */}
         <div>
           <h3 className="font-bold">Product</h3>
 
@@ -40,7 +39,7 @@ const Footer = () => {
         </div>
 
 
-        {/* Company */}
+        
         <div>
           <h3 className="font-bold">Company</h3>
 
@@ -52,7 +51,7 @@ const Footer = () => {
         </div>
 
 
-        {/* Legal */}
+       
         <div>
           <h3 className="font-bold">Legal</h3>
 
@@ -65,7 +64,7 @@ const Footer = () => {
       </div>
 
 
-      {/* Bottom */}
+      
       <div className="border-t border-gray-100">
         <div className="mx-auto flex max-w-7xl justify-between px-6 py-5 text-sm text-gray-400">
 
