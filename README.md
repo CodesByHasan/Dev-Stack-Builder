@@ -6,10 +6,14 @@ Dev-Stack-Builder is a React application that enables users to explore technolog
 
 Users can browse technologies by category, and add their preferred technologies to the Your Stack panel.
 
+
+
 🌐 Live Demo
 🔗 Live Website: [Add your live deployment link here]
 
 🔗 GitHub Repository: [Add your GitHub repository link here]
+
+
 
 ✨ Features
 Browse technologies by category
@@ -25,6 +29,8 @@ Remove all selected technologies
 Receive instant feedback through React-Toastify
 
 Responsive layout with mobile navigation
+
+
 
 🛠️ Technologies Used
 
@@ -51,6 +57,8 @@ Purpose: Technology data
 ⚡ Vite
 Purpose: Development and build tool
 
+
+
 📂 Project Structure
 
 src/
@@ -67,6 +75,8 @@ src/
 ├── App.jsx / App.tsx
 ├── main.jsx / main.tsx
 └── index.css
+
+
 
 
 ⚛️ React Questions & Answers
