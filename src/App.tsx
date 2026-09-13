@@ -7,6 +7,7 @@ import YourStack from "./components/technologies/YourStack";
 import { toast } from "react-toastify";
 
 import type { IStack } from "./types/Types";
+import Footer from "./components/Footer";
 
 
 /* =========================================================
@@ -94,11 +95,12 @@ const App = () => {
               stack={stack}
               setStack={setStack}
             />
+           
 
           </div>
-
+            
         </div>
-
+                <Footer />
       </div>
     </>
   );

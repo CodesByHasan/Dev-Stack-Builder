@@ -23,7 +23,7 @@ const Technologies = ({
   return (
      <div className="my-[40px] -ml-3">
      <h2 className="mb-2 text-3xl font-bold">
-       Explore the Technologies
+       Explore the <span className="bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">Technologies</span>
      </h2>
      <p className="mb-6 text-gray-500">
      Pick one technology per category to build your ideal stack.
