@@ -9,9 +9,9 @@ Users can browse technologies by category, and add their preferred technologies 
 
 
 🌐 Live Demo
-🔗 Live Website: [Add your live deployment link here]
+🔗 Live Website: https://dev-stack-builder-lilac.vercel.app/
 
-🔗 GitHub Repository: [Add your GitHub repository link here]
+🔗 GitHub Repository: https://github.com/hasanmh9988770-MHR/Dev-Stack-Builder.git
 
 
 
@@ -61,21 +61,29 @@ Purpose: Development and build tool
 
 📂 Project Structure
 
-src/
-├── assets/
-├── components/
-│   ├── Navbar/
-│   ├── Banner/
-│   ├── TechnologyCard/
-│   ├── TechnologyGrid/
-│   ├── YourStack/
-│   └── Footer/
-├── data/
-│   └── technologies.json
-├── App.jsx / App.tsx
-├── main.jsx / main.tsx
-└── index.css
-
+DevStack-builder/
+└── devstack-builder-with-react-ts/
+    ├── dist/
+    ├── public/
+    │   └── data.json
+    └── src/
+        ├── assets/
+        │   ├── banner-stack.png
+        │   ├── hero.png
+        │   └── logo-text.png
+        ├── components/
+        │   ├── technologies/
+        │   │   ├── StackCards.tsx
+        │   │   ├── Technologies.tsx
+        │   │   └── YourStack.tsx
+        │   ├── Banner.tsx
+        │   ├── Footer.tsx
+        │   └── Navbar.tsx
+        ├── types/
+        │   └── Types.ts
+        ├── App.tsx
+        ├── index.css
+        └── main.tsx
 
 
 
