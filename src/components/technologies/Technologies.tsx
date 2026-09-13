@@ -1,29 +1,37 @@
-import { use } from "react";
-import type { IStack } from "../../types/Types";
-import technologies from './Technologies';
-import StackCards from "./StackCards";
+import { use } from 'react'
+
+import type { IStack } from '../../types/Types'
+import StackCards from './StackCards'
 
 interface TechnologiesProps {
-  stackPromise: Promise<IStack[]>;
+  stackPromise: Promise<IStack[]>
+  selectedStack: IStack[]
+  handleAddToStack: (item: IStack) => void
 }
 
-const Technologies = ({ stackPromise }: TechnologiesProps) => {
-    const stack = use(stackPromise);
-    return (
-        <div className="my-[40px] container mx-auto">
-  <h2 className="text-3xl font-bold">
-    Explore the{" "}
-    <span className="bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">
-      Technologies
-    </span>
-  </h2>
+const Technologies = ({
+  stackPromise,
+  selectedStack,
+  handleAddToStack,
+}: TechnologiesProps) => {
 
-  <p className="mt-2 text-base text-[#64748B]">
-    Pick one technology per category to build your ideal stack.
-  </p>
-  <StackCards stack={stack} />
-</div>
-    );
-};
+  const stack = use(stackPromise)
 
-export default Technologies;
+  return (
+    <div className="my-10">
+
+      <h2 className="mb-6 text-3xl font-bold">
+        Explore the Technologies
+      </h2>
+
+      <StackCards
+        stack={stack}
+        selectedStack={selectedStack}
+        handleAddToStack={handleAddToStack}
+      />
+
+    </div>
+  )
+}
+
+export default Technologies
