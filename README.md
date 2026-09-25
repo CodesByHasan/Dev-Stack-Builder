@@ -2,131 +2,140 @@
 
 Build a personalized technology stack with modern development tools. 🚀
 
-Dev-Stack-Builder is a React application that enables users to explore technologies and create a personalized development stack.
+**Dev-Stack-Builder** is a React and TypeScript web application that enables developers to explore technologies, filter tools by category, and build a custom development stack in real-time. Users can manage their choices with instant toast feedback, clean persistence, and a modern, fully responsive user interface.
 
-Users can browse technologies by category, and add their preferred technologies to the Your Stack panel.
+---
 
+## 🌐 Live Demo & Repository
+* 🔗 **Live Website:** [https://dev-stack-builder-lilac.vercel.app/](https://dev-stack-builder-lilac.vercel.app/)
+* 🔗 **GitHub Repository:** [https://github.com/CodesByHasan/Dev-Stack-Builder.git](https://github.com/CodesByHasan/Dev-Stack-Builder.git)
 
+---
 
-🌐 Live Demo
-🔗 Live Website: https://dev-stack-builder-lilac.vercel.app/
+## 📸 Preview / Screenshot
 
-🔗 GitHub Repository: https://github.com/CodesByHasan/Dev-Stack-Builder.git
+![Dev-Stack-Builder Preview](./src/assets/hero.png)
 
+---
 
+## ✨ Key Features
+* 🏷️ **Browse by Category:** Filter technologies easily across different development domains.
+* 📊 **Rich Technology Metadata:** View descriptions, difficulty levels, star ratings, and badges.
+* ➕ **Dynamic Stack Management:** Add or remove technologies from the "Your Stack" panel.
+* 🛡️ **Duplicate Prevention:** Automatically prevents users from adding the same technology twice.
+* 🧹 **Bulk Actions:** Clear all selected technologies with a single click.
+* 🔔 **Instant Toast Notifications:** Powered by React-Toastify for seamless UI interaction alerts.
+* 📱 **Fully Responsive:** Mobile-friendly navigation and dynamic layout structure.
 
-✨ Features
-Browse technologies by category
+---
 
-View descriptions, difficulty levels, ratings, and badges
-
-Add and remove technologies from Your Stack
-
-Prevent duplicate selections
-
-Remove all selected technologies
-
-Receive instant feedback through React-Toastify
-
-Responsive layout with mobile navigation
-
-
-
-🛠️ Technologies Used
-
-⚛️ React.js
-Purpose: User interface
-
-🎨 Tailwind CSS
-Purpose: Styling
-
-🌼 DaisyUI
-Purpose: UI components
-
-📜 JavaScript (ES6+) / TypeScript
-
-Purpose: Application logic
-
-🔔 React-Toastify
-
-Purpose: Notifications
-
-📦 JSON
-Purpose: Technology data
-
-⚡ Vite
-Purpose: Development and build tool
+## 🛠️ Technologies Used
+* ⚛️ **React.js** — Component-based UI rendering
+* 📘 **TypeScript** — Strongly-typed application architecture and interface safety
+* 📜 **JavaScript (ES6+)** — Client-side application logic and state management
+* 🎨 **Tailwind CSS** — Utility-first responsive styling
+* 🌼 **DaisyUI** — Clean component styling framework
+* 🔔 **React-Toastify** — Interactive user feedback notifications
+* 📦 **JSON** — Structured mock database for technology stack data
+* ⚡ **Vite** — Next-generation frontend build tool
 
 
 
-📂 Project Structure
+## 📂 Project Structure
+
 
 DevStack-builder/
 └── devstack-builder-with-react-ts/
     ├── dist/
     ├── public/
     │   └── data.json
-    └── src/
-        ├── assets/
-        │   ├── banner-stack.png
-        │   ├── hero.png
-        │   └── logo-text.png
-        ├── components/
-        │   ├── technologies/
-        │   │   ├── StackCards.tsx
-        │   │   ├── Technologies.tsx
-        │   │   └── YourStack.tsx
-        │   ├── Banner.tsx
-        │   ├── Footer.tsx
-        │   └── Navbar.tsx
-        ├── types/
-        │   └── Types.ts
-        ├── App.tsx
-        ├── index.css
-        └── main.tsx
+    ├── src/
+    │   ├── assets/
+    │   │   ├── banner-stack.png
+    │   │   ├── hero.png
+    │   │   └── logo-text.png
+    │   ├── components/
+    │   │   ├── technologies/
+    │   │   │   ├── StackCards.tsx
+    │   │   │   ├── Technologies.tsx
+    │   │   │   └── YourStack.tsx
+    │   │   ├── Banner.tsx
+    │   │   ├── Footer.tsx
+    │   │   └── Navbar.tsx
+    │   ├── types/
+    │   │   └── Types.ts
+    │   ├── App.tsx
+    │   ├── index.css
+    │   └── main.tsx
+    ├── package.json
+    ├── tsconfig.json
+    ├── vite.config.js
+    └── README.md
+
+
+---
+
+## 🚀 Getting Started (Local Setup)
+
+Follow these steps to set up and run the project locally on your machine:
+
+### 1. Clone the Repository
+
+```bash
+git clone [https://github.com/CodesByHasan/Dev-Stack-Builder.git](https://github.com/CodesByHasan/Dev-Stack-Builder.git)
+
+```
+
+### 2. Navigate to Project Directory
+
+```bash
+cd DevStack-builder/devstack-builder-with-react-ts
+
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+
+```
+
+### 4. Run Development Server
+
+```bash
+npm run dev
+
+```
+
+### 5. Open in Browser
+
+Visit `http://localhost:5173/` in your browser.
+
+---
+
+## 🏗️ Build & Production Preview
+
+To create an optimized production build:
+
+```bash
+npm run build
+
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+
+```
+
+---
+
+## 👨‍💻 Developer
+**Md Hasan** — [GitHub Profile](https://github.com/CodesByHasan?utm_source=gemini)
 
 
 
-⚛️ React Questions & Answers
+## 📄 License
 
-1. What is JSX, and why is it used in React?
-
-JSX is a syntax extension for JavaScript. We can write HTML-like markup directly inside a JavaScript file. All React developers use it because it makes code for UI components more intuitive and readable.
-
-2. What is the difference between props and state?
-
-Props are read-only data passed from parent to child, while State is internal, changeable data managed by a component. When State changes, React re-renders the UI.
-
-3. What does the useState hook do, and where did you use it in this project?
-
-useState hook returns an array with two items: the current state value, and a setter function, used to update that state. We use array destructuring to assign them to variables.
-I'll use it to add state to a functional component, mainly for the “Your Stack” section and the Add to Stack, ❌ Remove and Remove All interactions.
-
-4. What does the useEffect hook do, and why did you need it to load the JSON data?
-
-The useEffect hook is basically used for side effects inside React components.
-I need it because the JSON data needs to be loaded after the component renders, and useEffect handles this smoothly by running after the component renders.
-
-5. Why does every item in a .map() list need a unique key prop?
-
-To render a dynamic list, items can be added, removed, or reordered. React needs a reliable way to identify exactly which item has changed so it can update the Real DOM efficiently instead of re-rendering the entire list. Keys are special attributes that give each list item a unique identity and help React handle these changes smoothly.
-
-6. What is conditional rendering? Show one place you used it (example: the empty stack message).
-
-Conditional rendering means showing different components or content based on a condition or the current state of the application. In React, it works just like If a condition is true, show something; if it’s false, show something else.
-
-Example: 
- {stack.length === 0 ? (
-  <p>Your stack is empty.</p>
-) : (
-  <TechnologyList />
-)}
-
-
-7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
-
-I can pass data from a parent component to a child component by using props, because props maintain One-Way Data Flow and only can be passed down the component tree (from a Parent component to a Child component).
-
-lifting state up is exactly how a child sends data back to a parent. Lifting state up means moving state to a common parent so the parent can control it. The parent passes a callback function to the child, and the child calls it to change the parent’s state.
-
-Flow: Parent → callback → Child → calls callback → Parent’s state changes
+This project is open-source and created for educational and portfolio purposes.
