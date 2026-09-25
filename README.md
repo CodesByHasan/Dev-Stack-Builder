@@ -14,7 +14,8 @@ Build a personalized technology stack with modern development tools. 🚀
 
 ## 📸 Preview / Screenshot
 
-![Dev-Stack-Builder Preview](./src/assets/hero.png)
+<img width="1919" height="1030" alt="Screenshot 2026-09-25 at 7 59 15 PM" src="https://github.com/user-attachments/assets/e934d85d-fd50-4fa7-b1c8-ebb5f5a9aec4" />
+
 
 ---
 
