@@ -11,7 +11,7 @@ Users can browse technologies by category, and add their preferred technologies 
 🌐 Live Demo
 🔗 Live Website: https://dev-stack-builder-lilac.vercel.app/
 
-🔗 GitHub Repository: https://github.com/hasanmh9988770-MHR/Dev-Stack-Builder.git
+🔗 GitHub Repository: https://github.com/CodesByHasan/Dev-Stack-Builder.git
 
 
 
